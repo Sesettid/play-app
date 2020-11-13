@@ -1,0 +1,49 @@
+@(resultList: List[TwitterResultModel])
+<html>
+<head>
+
+</head>
+<body>
+<div class="modal-container"></div>
+<div class="container">
+
+    <ul>
+        @for(p <- resultList) {
+        <li > @p.twitterName ,@p.tweetContent , @p.hashTag> </li>
+        }
+    </ul>
+</div>
+
+
+
+<script>
+
+    function goTo(url)
+    {
+      location.replace(url);
+    }
+
+
+    function getprofile() {
+
+        var profile = $("#searchInput").val()
+
+        window.location.replace("profile/");
+        }
+
+    function goBack() {
+        window.location.replace("http://localhost:9000/");
+        }
+
+        function search(){
+  var searchText = $("#searchInput").val()
+
+  window.location.replace(searchText);
+  }
+
+
+
+
+    </script>
+
+</body>
